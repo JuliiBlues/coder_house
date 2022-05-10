@@ -1,0 +1,79 @@
+:root{
+    --background-grupo-color: #454545;
+}
+
+#contenedor-grupos{
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+    margin: 60px auto;
+    width: 90%;
+}
+
+.grupo{
+    width: 90%; 
+    margin: 10px 0 0 0;  
+}
+
+.cabecera-grupo{
+    display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+    position: relative;
+
+    padding: 0 20px;
+    height: 3.5em;
+    width: 100%;
+    border-radius: 7px;
+    border-radius: 7px;
+    z-index: 100;
+    background-color: var(--background-grupo-color);
+}
+
+.alias-grupo{
+    font-size: 1.5em;
+    font-weight: 300;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    text-align: left;
+    background-color: transparent;
+}
+
+.icono-cabecera{
+    cursor: pointer;
+    color: white;
+}
+
+.icono-cabecera-editar {
+    margin: 0 0 0 20px;
+}
+
+.icono-cabecera-eliminar{
+    margin: 0 0 0 20px;
+}
+
+.icono-cabecera-desplegar{
+    position: absolute;
+        right: 0;
+    
+    margin: 0 20px 0 0;
+}
+
+.fa-check{
+    font-size: 1.13em;
+}
+
+.corregir-borde-grupo{
+    border-radius: 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.oculto {display: none;}
