@@ -1,0 +1,17 @@
+Referencia 1: 
+
+La variable “terminarPrograma” podría inicializarse como true y evaluarla de esa manera. Pero la condición del while sería “mientras terminarPrograma == true”, con lo cual, no sería una buena semántica. 
+Para ello, la variable se utiliza inicializada en false y evaluada negada. De esta manera quedaría la condición del while  “mientras NO terminarPrograma == true” con lo cual adquiere más sentido semántico.
+
+
+
+Referencia 2:
+
+Para calcular el resto de una división se utiliza el operador aritmético “%”, pero como aún no lo vimos, el resto se debe obtener de otra manera.
+Este algoritmo utiliza la fórmula matemática:
+    
+Dividendo = Cociente * Divisor + Resto.
+
+Para obtener el resto hay que simplemente despejar, quedando: 
+
+Resto = Divisor - Cociente * Dividendo;
