@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager - Manage your own passwords</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+    
+    <script src="https://kit.fontawesome.com/ea89d72c84.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1 id="header__title">
+            <span>Welcome to</span>
+            <span>Password Manager</span>
+        </h1>
+    </header>
+
+    <main>
+
+        <section id="main__section--info">
+            <h2 id="main__section__subhead">
+                Creating, storing and managing your passwords has never been easier
+            </h2>
+            <a id="main__section__button" class="animation-effect"><span>Get Started</span></a>
+        </section>
+
+        <section id="section-user-fields" class="hide">
+            <form id="main__section__form">
+                <div>
+                    <button id="btn-login" class="main__section__form__button btn-form-selected" type="button">Login</button>
+                    <button id="btn-signup" class="main__section__form__button btn-form-deselected" type="button">Signup</button>
+                </div>
+                <div id="icon-container">
+                    <i id="icon-user" class="fa-solid fa-user"></i>
+                    <i id="icon-email" class="fa-solid fa-envelope" hidden></i>
+                    <i id="icon-password" class="fa-solid fa-lock icon-password-signup"></i>
+                </div>
+                <input id="txt-username" type="text" placeholder="Username" required>
+                <input id="txt-email" type="email" placeholder="Email" hidden required>
+                <input id="txt-password" type="password" placeholder="Password" required>
+                <p id="msg-validation" hidden><i class="fa-solid fa-times"></i>Wrong credentials</p>
+                <button id="btn-confirm" class="animation-effect" type="submit"><span>Login</span></button>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="./js/app.entities/Account.js"></script>
+    <script src="./js/app.dal/Dal.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

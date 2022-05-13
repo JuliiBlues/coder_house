@@ -1,0 +1,213 @@
+:root {
+    --background-color: #343434;
+    --text-color: #efefeF;
+    --background-color-group-header: #545454;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+    padding: 10px;
+    min-height: 100vh;
+    width: 100%;
+    min-width: 250px;
+    background-color: var(--background-color);
+}
+
+header{
+    width: 100%;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid var(--text-color);
+}
+
+#header__title{
+    font-weight: 300;
+    text-align: center;
+    color: var(--text-color);
+}
+
+main{
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    
+    width: 100%;
+}
+
+#main-btn-container{
+    position: relative;
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+
+.main-btn{
+    font-weight: 600;
+    width: 170px;
+    height: 35px;
+    border: none;
+    border: 2px solid var(--text-color);
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+#btn-create-password{
+    position: absolute;
+        right: 0;
+}
+
+.border-bottom-radius{
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.border-top-radius{
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+/* GROUP HEADER */
+
+#group-container{
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+    padding: 20px 0 0 0;
+    width: 100%;
+}
+
+.unique-group{
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+
+.unique-group__group-menu{
+    display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+    width: 100%;
+    height: 50px;
+    padding: 20px 10px;
+    background-color: var(--background-color-group-header);
+}
+
+.icons-container{
+    display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    
+    width: 100%;
+}
+
+.group-alias{
+    font-size: 1.13em;
+    font-weight: 300;
+    text-align: left;
+    padding: 0 5px;
+    width: 175px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+.group-menu-btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 5px;
+    background-color: transparent;
+}
+
+.group-menu-icons{
+    color: var(--text-color);
+}
+
+.unique-group__group-passwords{
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+    width: 100%;
+    background-color: transparent;
+}
+
+.password-list{
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+    position: relative;
+    min-height: 15px;
+    width: 100%;
+    list-style: none;
+    background-color: #616161;   
+}
+
+.password-list li{
+    display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    
+    padding: 5px 0 0 20px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.password-list input{
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+.password-list li button{
+    position: absolute;
+        right: 0;
+    
+    margin: 0 15px 0 0;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+.password-list li button i{
+    font-size: 1.05em;
+}
+
+.password-list li button:nth-child(2){
+    right: 38px;
+}
+
+.password-list li:last-child{
+    margin-bottom: 15px;
+}
+
+.hide{display: none !important;}
+
+
