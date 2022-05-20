@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet"> 
     
     <script src="https://kit.fontawesome.com/ea89d72c84.js" crossorigin="anonymous"></script>
     
@@ -18,44 +18,31 @@
 <body>
 
     <header>
-        <h1 id="header__title">
-            <span>Welcome to</span>
-            <span>Password Manager</span>
-        </h1>
+        <h1 id="header__title">Welcome to Password Manager</h1>
+        <h2 id="header__subhead">Creating, storing and managing your passwords has never been easier</h2>
     </header>
 
     <main>
-
-        <section id="main__section--info">
-            <h2 id="main__section__subhead">
-                Creating, storing and managing your passwords has never been easier
-            </h2>
-            <a id="main__section__button" class="animation-effect"><span>Get Started</span></a>
-        </section>
-
-        <section id="section-user-fields" class="hide">
-            <form id="main__section__form">
-                <div>
-                    <button id="btn-login" class="main__section__form__button btn-form-selected" type="button">Login</button>
-                    <button id="btn-signup" class="main__section__form__button btn-form-deselected" type="button">Signup</button>
+        <section id="form-container">
+            <form action="">
+                <div class="btn-container">
+                    <button id="btn-login" class="btn-form btn-deselected--login"><span>Log In</span></button>
+                    <button id="btn-signup" class="btn-form btn-selected--signup"><span>Sign Up</span></button>
                 </div>
-                <div id="icon-container">
-                    <i id="icon-user" class="fa-solid fa-user"></i>
-                    <i id="icon-email" class="fa-solid fa-envelope" hidden></i>
-                    <i id="icon-password" class="fa-solid fa-lock icon-password-signup"></i>
+                <div id="field-container" hidden>
+                    <i class="fa-solid fa-user icon-form"></i><input id="txt-username" type="text" placeholder="Username"><br>
+                    <i class="fa-solid fa-envelope icon-form field-email fade-in"></i><input id="txt-email" class ="field-email fade-in" type="email" placeholder="Email">
+                    <i class="fa-solid fa-lock icon-form"></i><input id="txt-password" type="password" placeholder="Password">
+                    <button id="btn-confirm"><span>Sign Up</span></button>
                 </div>
-                <input id="txt-username" type="text" placeholder="Username" required>
-                <input id="txt-email" type="email" placeholder="Email" hidden required>
-                <input id="txt-password" type="password" placeholder="Password" required>
-                <p id="msg-validation" hidden><i class="fa-solid fa-times"></i>Wrong credentials</p>
-                <button id="btn-confirm" class="animation-effect" type="submit"><span>Login</span></button>
             </form>
         </section>
-
     </main>
 
-    <script src="./js/app.entities/Account.js"></script>
-    <script src="./js/app.dal/Dal.js"></script>
-    <script src="js/index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/Account.js"></script>
+    <script src="./js/DAL.js"></script>
+    <script src="./js/AccValidation.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
