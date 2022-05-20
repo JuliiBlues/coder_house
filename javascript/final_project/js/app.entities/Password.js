@@ -40,10 +40,8 @@ class Password{
 
         let list = dictionary.find(aux => aux.type == charactersList);
 
-        if(list != undefined)
-            return list.characters;
-        else
-            return undefined;
+
+        return (list != undefined)? list.characters : undefined;
     }
 
     //PRE: Nothing

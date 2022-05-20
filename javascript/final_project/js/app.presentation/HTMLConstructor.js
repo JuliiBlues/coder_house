@@ -72,6 +72,7 @@ class Group{
         id = parseInt(id);
         let passwordheader = document.getElementById(`li-password-header-${id}`);
         let password = document.getElementById(`li-password-${id}`);
+        
         if(passwordheader == undefined || password == undefined)
             return null
 

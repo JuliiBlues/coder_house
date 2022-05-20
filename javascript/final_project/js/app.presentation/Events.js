@@ -9,13 +9,11 @@ class GroupEvents{
         });
 
         input.addEventListener("focus", () =>{
-            if(input.value == defMessage)
-                input.value = "";
+            input.value == defMessage && (input.value = "");
         })
 
         input.addEventListener("blur", () =>{
-            if(input.value == "")
-                input.value = defMessage;
+            input.value == "" && (input.value = defMessage);
 
             input.disabled = true;
         });
