@@ -36,11 +36,16 @@
                 <button id="button-random-password-copy"type="button"><i class="fa-solid fa-copy"></i></button>  
             </div>
             <input id="display-password"type="text" placeholder="at least one character type must be selected" disabled>
-            <input id="length-password" type="range" min="1" max="64"><label id="value-input-range">value: </label>
-            <input id="chkBox-lower-case" type="checkbox"><label for="chkBox-lower-case">Lower</label>
-            <input id="chkBox-upper-case" type="checkbox"><label for="chkBox-upper-case">Upper</label>
-            <input id="chkBox-number" type="checkbox"><label for="chkBox-number">Numbers</label>
-            <input id="chkBox-symbol" type="checkbox"><label for="chkBox-symbol">Symbols</label>
+            <div id="random-password-container--length">
+                <input id="length-password" type="range" min="1" max="64"><label id="value-input-range">value: </label>
+            </div>
+            <div id="random-password-container--checkbox">
+                <input id="chkBox-lower-case" type="checkbox"><label id="chkBox-lower-label" for="chkBox-lower-case">Lower</label>
+                <input id="chkBox-upper-case" type="checkbox"><label id="chkBox-upper-label" for="chkBox-upper-case">Upper</label>
+                <input id="chkBox-number" type="checkbox"><label id="chkBox-number-label" for="chkBox-number">Numbers</label>
+                <input id="chkBox-symbol" type="checkbox"><label id="chkBox-symbol-label" for="chkBox-symbol">Symbols</label>
+            </div>
+            
         </div>  
     </section>
 

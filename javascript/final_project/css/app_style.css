@@ -275,7 +275,8 @@ article div input{
         grid-template-columns: 1fr 50px 50px;
         grid-template-rows: 35px;
 
-    width: 98%;
+    width: 360px;
+    margin: 0 auto;
 }
 
 #random-password-header--container h3{
@@ -295,14 +296,26 @@ article div input{
     cursor: pointer;
     border: none;
     text-align: center;
-    color: var(--button-color);
+    color: var(--background-color);
     background-color: transparent;
+}
+
+#random-password-container--length{
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+    width: 360px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 #display-password{
     font-size: 1.2em;
-    width: 98%;
+    width: 360px;
     padding-bottom: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
     border: none;
     border-bottom: 1px solid var(--button-color);
     color: var(--background-color);
@@ -310,5 +323,66 @@ article div input{
 }
 
 #length-password{
-    width: 50%;
+    width: 220px;
+    outline:none;
+}
+
+#value-input-range{
+    font-size: 1.2em;
+    margin: 0 20px;
+    color: var(--background-color);
+}
+
+#random-password-container--checkbox{
+    display: grid;
+        grid-template-areas: "chb-lower chb-lower-label chb-upper chb-upper-label"
+                             "chb-number chb-number-label chb-symbol chb-symbol-label";
+    width: 360px;
+    margin: 0 auto;
+}
+
+#random-password-container--checkbox input{
+    width: 20px;
+    height: 20px;
+    margin: auto 0;
+    margin-left: 30px;
+}
+
+#random-password-container--checkbox label{
+    font-size: 1.3em;
+    margin: 5px;
+    cursor: pointer;
+    color: var(--background-color);
+}
+
+#chkBox-lower-case{
+    grid-area: chb-lower;
+}
+
+#chkBox-lower-label{
+    grid-area: chb-lower-label;
+}
+
+#chkBox-upper-case{
+    grid-area: chb-upper;
+}
+
+#chkBox-upper-label{
+    grid-area: chb-upper-label;
+}
+
+#chkBox-number{
+    grid-area: chb-number;
+}
+
+#chkBox-number-label{
+    grid-area: chb-number-label;
+}
+
+#chkBox-symbol{
+    grid-area: chb-symbol;
+}
+
+#chkBox-symbol-label{
+    grid-area: chb-symbol-label;
 }
