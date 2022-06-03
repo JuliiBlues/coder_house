@@ -21,7 +21,61 @@
         <h1 id="mssg-welcome">Welcome</h1>
     </header>
 
-    <script src="../js/DAL.js"></script>
-    <script src="../js/index-app.js"></script>
+    <section id="section-menu" class="menu-disabled hide">
+        <button id="button-close-menu" class="button-menu" type="button"><i class="fa-solid fa-times button-menu"></i></button>
+        <nav>
+            <button id="button-new-group" class="button-option-menu" type="button">New group</button>
+            <!-- <button id="button-random-password" class="button-option-menu" type="button">Random password</button> -->
+            <button id="button-log-out" class="button-option-menu" type="button">Log out</button>
+        </nav>
+
+        <div id="random-password-container">
+            <div id="random-password-header--container">
+                <h3>Random Password</h3>
+                <button id="button-generate" type="button"><i class="fa-solid fa-arrows-rotate"></i></button>
+                <button id="button-random-password-copy"type="button"><i class="fa-solid fa-copy"></i></button>  
+            </div>
+            <input id="display-password"type="text" placeholder="at least one character type must be selected" disabled>
+            <input id="length-password" type="range" min="1" max="64"><label id="value-input-range">value: </label>
+            <input id="chkBox-lower-case" type="checkbox"><label for="chkBox-lower-case">Lower</label>
+            <input id="chkBox-upper-case" type="checkbox"><label for="chkBox-upper-case">Upper</label>
+            <input id="chkBox-number" type="checkbox"><label for="chkBox-number">Numbers</label>
+            <input id="chkBox-symbol" type="checkbox"><label for="chkBox-symbol">Symbols</label>
+        </div>  
+    </section>
+
+    <main>
+        <button id="button-open-menu" class="button-menu" type="button"><i class="fa-solid fa-bars"></i></button>
+        <section id="groups-created">
+            <article class="unique-group">
+                <div class="unique-group--header">
+                    <input class="group-header-input" type="text" placeholder="Enter an alias" disabled>
+                    <i class="fa-solid fa-plus group-header-icon"></i>
+                    <i class="fa-solid fa-edit group-header-icon"></i>
+                    <i class="fa-solid fa-trash group-header-icon"></i>
+                    <i class="fa-solid fa-angle-down group-header-icon"></i>
+                </div>
+                <div class="unique-group--passwords">
+                    <ul class="unique-password">
+                        <li  class="li-alias-password"><input class="alias-password" type="text" placeholder="Enter a password alias" disabled></li>
+                        <li  class="li-password"><input type="text" placeholder="Enter a password" disabled></li>
+                        <li><button class="button-delete-password" type="button">Delete</button></li>
+                        <li  class="li-edit-alias-password"><button><i class="fa-solid fa-pencil"></i></button></li>
+                        <li  class="li-edit-password"><button><i class="fa-solid fa-pencil"></i></button></li>
+                        <li  class="li-copy-password"><button><i class="fa-solid fa-copy"></i></button></li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <section id="">
+            
+        </section>
+    </main>
+    
+    <script src="../js/app.presentation/app_randomPassword.js"></script>
+    <script src="../js/app.dal/DAL.js"></script>
+    <script src="../js/app.entities/HTMLCostructor.js"></script>
+    <script src="../js/app.presentation/index-app.js"></script>
 </body>
 </html>

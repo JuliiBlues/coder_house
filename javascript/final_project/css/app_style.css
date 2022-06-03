@@ -1,0 +1,314 @@
+:root{
+    --background-color: #efefef;
+    --text-color: #323232;
+    --button-color: #47A1FF;
+    --background-group-color: #dddddd;
+}
+
+.hide{display: none;}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    
+    position: relative;
+    padding: 10px;
+    height: 100vh;
+    width: 100%;
+    min-width: 300px;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+}
+
+header{
+    text-align: center;
+    padding: 0 0px;
+    width: 98%;
+    border-bottom: 2px solid var(--text-color);
+}
+
+#mssg-welcome{
+    font-size: 2.3em;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+main{
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    position: relative;
+    width: 98%;
+}
+
+main section{
+    margin: 55px 0;
+}
+
+#button-open-menu{
+    position: absolute;
+        right: 0;
+
+    font-size: 1.4em;
+    padding: 5px 10px;
+    margin: 10px 3px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: font .14s ease-in-out;
+}
+
+#button-open-menu:hover{
+    font-size: 1.5em;
+}
+
+#section-menu{
+    position: absolute;
+        top: 0;         
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    opacity: .9;
+    overflow-y: hidden;
+    transition: transform .5s ease-out;
+    background-color: var(--text-color);
+}
+
+.menu-disabled{
+    transform: translateX(100vw);
+}
+
+nav{
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    
+    margin: 100px;
+}
+
+#button-close-menu{
+    position: absolute;
+        right: 0;
+    font-size: 1.8em;
+    margin: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    color: var(--background-color);
+    background-color: transparent;
+    transition: font .15s ease-in-out;
+}
+
+#button-close-menu:hover{
+    font-size: 2em;
+}
+
+nav button{
+    font-size: 1.2em;
+    width: 240px;
+    margin: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid var(--button-color);
+    color: var(--background-color);
+    background-color: transparent;
+    transition: background .3s ease-in-out;
+}
+
+.button-option-menu:hover{
+    background-color: var(--background-color);
+    color: var(--text-color)
+}
+
+.section-menu{
+    background-color: #323232;
+}
+
+.unique-group{
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+    margin: 10px 0;
+}
+
+.unique-group--header{
+    display: grid;
+        grid-template-columns: 3fr repeat(4, 1fr);
+        grid-template-rows: 40px;
+    
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: 2px solid var(--button-color);
+    background-color: var(--background-group-color);
+}
+
+.group-header-input{
+    font-size: 1.08em;
+    font-weight: 500;
+    width: 180px;
+    padding: 0 10px;
+    border: none;
+    /* border-bottom: 1px solid var(--button-color); */
+    outline: none;
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+.group-header-icon{
+    font-size: 1.1em;
+    cursor: pointer;
+    margin: auto 0;
+    text-align: center;
+    color: var(--text-color);
+    transition: font .14s ease;
+}
+
+.group-header-icon:hover{
+    font-size: 1.3em;
+}
+
+.unique-group--passwords{
+    width: 97%;
+    border: 1px solid #47A1FF;
+    border-top: none;
+    background-color: var(--background-group-color);
+}
+
+.unique-password{
+    display: grid;
+        grid-template-columns: 1fr 30px 30px;
+        grid-template-rows: 50px 30px 30px;
+        justify-items: center;
+        align-items: center;
+    margin: 10px 0 0 0;
+    list-style: none;
+}
+
+li:nth-child(1), li:nth-child(2){
+    justify-self: start;
+    padding: 0 5px;
+    margin: 10px 0 10px 0;
+}
+
+li:nth-child(3){
+    grid-column: 2 / 3;
+    margin-left: 17px;
+}
+
+li button{
+    font-size: 1.25em;
+    padding: 1px;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: font .1s ease-in-out;
+}
+
+li button:hover{
+    font-size: 1.35em;
+}
+
+.button-delete-password{
+    font-size: 1.2em;
+    /* padding: 5px 10px; */
+}
+
+.li-alias-password{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.li-password{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.li-edit-alias-password{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.li-edit-password{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.li-copy-password{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+article div input{
+    font-size: 1.2em ;
+    padding: 0 0 0 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+#random-password-container{
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+    width: 98%;
+    /* background-color: #47A1FF;    */
+}
+
+#random-password-header--container{
+    display: grid;
+        grid-template-columns: 1fr 50px 50px;
+        grid-template-rows: 35px;
+
+    width: 98%;
+}
+
+#random-password-header--container h3{
+    font-size: 1.5em; 
+    font-weight: 300;
+    padding-left: 10px ;
+    text-align: left;
+    align-self: center;
+    color: var(--background-color);
+}
+
+#random-password-header--container button{
+    font-size: 1.3em;
+    width: 100%;
+    height: 100%;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    color: var(--button-color);
+    background-color: transparent;
+}
+
+#display-password{
+    font-size: 1.2em;
+    width: 98%;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid var(--button-color);
+    color: var(--background-color);
+    background-color: transparent;
+}
+
+#length-password{
+    width: 50%;
+}

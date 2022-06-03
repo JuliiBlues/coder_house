@@ -48,11 +48,15 @@ class StorageManager{
         sessionStorage.setItem("accountLoggedIn", JSON.stringify(account));
     }
 
+    accountLogOut(){
+        sessionStorage.removeItem("accountLoggedIn");
+    }
+
     //PRE: Nothing.
     //POST: Returns the account stored in sessionStorage. If not exists returns null.
     getAccountLoggedIn(){
         const accountLoggedIn = JSON.parse(sessionStorage.getItem("accountLoggedIn"));
-        return accountLoggedIn;
+        return accountLoggedIn || undefined;
     }
 
     //PRE: Nothing.
